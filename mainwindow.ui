@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>307</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QGraphicsView" name="graphicsView"/>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QPushButton" name="btnOpen">
+        <property name="text">
+         <string>OPEN</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnSave">
+        <property name="text">
+         <string>SAVE</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="btnPre">
+        <property name="text">
+         <string>&lt;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnNext">
+        <property name="text">
+         <string>&gt;</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnReset">
+      <property name="text">
+       <string>RESET</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>400</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuIntensity_Transformation">
+    <property name="title">
+     <string>Intensity Transformation</string>
+    </property>
+    <addaction name="actionRgb2gray"/>
+    <addaction name="actionInverse"/>
+    <addaction name="actionLogTran"/>
+    <addaction name="actionHistEq"/>
+    <addaction name="actionColorHist"/>
+   </widget>
+   <widget class="QMenu" name="menuSpatial_Filter">
+    <property name="title">
+     <string>Spatial Filter</string>
+    </property>
+    <addaction name="actionLinear"/>
+    <addaction name="actionGaussBlur"/>
+    <addaction name="actionBilateralFilter"/>
+    <addaction name="actionMedianFilter"/>
+    <addaction name="actionMaximumFilter"/>
+    <addaction name="actionMinimumFilter"/>
+    <addaction name="actionLowpassFilter"/>
+    <addaction name="actionHighpassFilter"/>
+   </widget>
+   <widget class="QMenu" name="menuFft">
+    <property name="title">
+     <string>Frequency Domain</string>
+    </property>
+    <addaction name="actionFft"/>
+    <addaction name="actionIfft"/>
+   </widget>
+   <widget class="QMenu" name="menuAffine_transformation">
+    <property name="title">
+     <string>Affine transformation</string>
+    </property>
+    <addaction name="actionTransform"/>
+   </widget>
+   <addaction name="menuIntensity_Transformation"/>
+   <addaction name="menuSpatial_Filter"/>
+   <addaction name="menuFft"/>
+   <addaction name="menuAffine_transformation"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionRgb2gray">
+   <property name="text">
+    <string>rgb2gray</string>
+   </property>
+  </action>
+  <action name="actionInverse">
+   <property name="text">
+    <string>inverse</string>
+   </property>
+  </action>
+  <action name="actionLogTran">
+   <property name="text">
+    <string>Log Transformation</string>
+   </property>
+  </action>
+  <action name="actionHistEq">
+   <property name="text">
+    <string>histogram equal</string>
+   </property>
+  </action>
+  <action name="actionColorHist">
+   <property name="text">
+    <string>color hist</string>
+   </property>
+  </action>
+  <action name="actionLinear">
+   <property name="text">
+    <string>Linear</string>
+   </property>
+  </action>
+  <action name="actionGaussBlur">
+   <property name="text">
+    <string>Gauss Blur</string>
+   </property>
+  </action>
+  <action name="actionBilateralFilter">
+   <property name="text">
+    <string>Bilateral Filter</string>
+   </property>
+  </action>
+  <action name="actionMedianFilter">
+   <property name="text">
+    <string>Median Filter</string>
+   </property>
+  </action>
+  <action name="actionMaximumFilter">
+   <property name="text">
+    <string>Maximum Filter</string>
+   </property>
+  </action>
+  <action name="actionMinimumFilter">
+   <property name="text">
+    <string>Minimum Filter</string>
+   </property>
+  </action>
+  <action name="actionLinearGray">
+   <property name="text">
+    <string>Linear Gray</string>
+   </property>
+  </action>
+  <action name="actionGaussBlurGray">
+   <property name="text">
+    <string>Gauss Blur Gray</string>
+   </property>
+  </action>
+  <action name="actionLinear_Gray">
+   <property name="text">
+    <string>Linear Gray</string>
+   </property>
+  </action>
+  <action name="actionGaussBlur_Gray">
+   <property name="text">
+    <string>Gauss Blur Gray</string>
+   </property>
+  </action>
+  <action name="actionMedianFilter_RGB">
+   <property name="text">
+    <string>Median Filter RGB</string>
+   </property>
+  </action>
+  <action name="actionMaximumFilter_RGB">
+   <property name="text">
+    <string>Maximum Filter RGB</string>
+   </property>
+  </action>
+  <action name="actionMinimumFilter_RGB">
+   <property name="text">
+    <string>Minimum Filter RGB</string>
+   </property>
+  </action>
+  <action name="actionFft">
+   <property name="text">
+    <string>fft</string>
+   </property>
+  </action>
+  <action name="actionIfft">
+   <property name="text">
+    <string>ifft</string>
+   </property>
+  </action>
+  <action name="actionTransform">
+   <property name="text">
+    <string>Transform</string>
+   </property>
+  </action>
+  <action name="actionLowpass_filter">
+   <property name="text">
+    <string>Lowpass filter</string>
+   </property>
+  </action>
+  <action name="actionHighpass_filter">
+   <property name="text">
+    <string>Highpass filter</string>
+   </property>
+  </action>
+  <action name="actionLowpassFilter">
+   <property name="text">
+    <string>Lowpass Filter</string>
+   </property>
+  </action>
+  <action name="actionHighpassFilter">
+   <property name="text">
+    <string>Highpass Filter</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
